@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavBar } from "../Nav";
-import { Row, Col, Card, Container, Image } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { PythonCard, PythonImg } from "../Cards/Python";
 import { GolangCard, GolangImg } from "../Cards/Golang";
 import { JavascriptCard, JavascriptImg } from "../Cards/Javascript";
 
-export const Languages = () => {
+export const Languages: React.FC = (): ReactElement => {
   const [open, setOpen] = useState("");
   return (
     <div className="Languages">

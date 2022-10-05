@@ -1,7 +1,8 @@
+import React, { ReactElement } from "react";
 import { Container } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 
-export const HomeCard = () => {
+export const HomeCard: React.FC = (): ReactElement => {
   return (
     <Container>
       <Card
@@ -13,22 +14,8 @@ export const HomeCard = () => {
         <Card.Body>
           <Card.Title>About Me</Card.Title>
           <Card.Text>
-            <p>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <p>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <p>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <p>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
+            <p>Stuff and text</p>
+            <p>Stuff and text</p>
           </Card.Text>
         </Card.Body>
       </Card>

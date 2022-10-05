@@ -1,9 +1,9 @@
+import React, { ReactElement } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 
-export const NavBar = () => {
+export const NavBar: React.FC = (): ReactElement => {
   return (
     // <Container>
     <Navbar bg="dark" expand="lg" variant="dark">

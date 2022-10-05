@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Projects } from "./Pages/Projects";
@@ -6,7 +6,7 @@ import { Languages } from "./Pages/Languages";
 import { Home } from "./Pages/Home";
 // import "./index.css";
 
-const Routing = () => {
+const Routing: React.FC = (): ReactElement => {
   return (
     <Router>
       <Routes>
