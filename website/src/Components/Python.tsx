@@ -34,12 +34,24 @@ export const PythonCard = (props: { open: string }): ReactElement => {
             <Card.Title>Python</Card.Title>
             <Card.Text className="mx-auto" style={{ width: "40rem" }}>
               <p>
-                Python is the language I have the most experience in. Initially
-                I used it for data analysis, machine learning and neuron
-                simulation while pursuing a masters in computational
-                neuroscience. After leaving academics I used Python while
-                working as a backend developer at Yandex in a team that did
-                service discovery.
+                <span>
+                  Python is the language I have the most experience in.
+                  Initially I used it in{" "}
+                </span>
+                <a className="noUnderline" href="/projects?project=university">
+                  university
+                </a>
+                <span>
+                  {" "}
+                  for data analysis, machine learning and neuron simulation
+                  while pursuing a masters in computational neuroscience. After
+                  leaving academics I used Python while working as a backend
+                  developer at{" "}
+                </span>
+                <a className="noUnderline" href="/projects?project=yandex">
+                  Yandex
+                </a>
+                <span> in a team that did service discovery.</span>
               </p>
             </Card.Text>
           </Card.Body>

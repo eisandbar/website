@@ -34,12 +34,24 @@ export const GolangCard = (props: { open: string }): ReactElement => {
             <Card.Title>Golang</Card.Title>
             <Card.Text className="mx-auto" style={{ width: "40rem" }}>
               <p>
-                Golang is one of my favorite languages to work in and the one I
-                use for most of most of my recent projects. I first learned it
-                back while working at Yandex as part of the codebase was in GO,
-                and have since grown to love it. Some of my recent work includes
-                BusPool and Poker, as well some simple opensource contributions
-                where I added tests and small features.
+                <span>
+                  Golang is one of my favorite languages to work in and the one
+                  I use for most of most of my recent projects. I first learned
+                  it back while working at Yandex as part of the codebase was in
+                  GO, and have since grown to love it. Some of my recent work
+                  includes{" "}
+                </span>
+                <a className="noUnderline" href="/projects?project=buspool">
+                  BusPool
+                </a>
+                <span> and </span>
+                <a className="noUnderline" href="/projects?project=poker">
+                  Poker
+                </a>
+                <span>
+                  , as well as simple opensource contributions where I added
+                  tests and small features.
+                </span>
               </p>
               <p></p>
             </Card.Text>

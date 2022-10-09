@@ -35,11 +35,21 @@ export const JavascriptCard = (props: { open: string }): ReactElement => {
             <Card.Text className="mx-auto" style={{ width: "40rem" }}>
               <p>
                 My first non academic project was in Javascript. It was a
-                multi-room chat app called Topico that used express and
-                websockets. Since then I have used Javascript when working on
-                our service UI at Yandex as well as in my own projects,
-                including this website. I use JS mostly with React and since I
-                prefer strongly typed languages I use typescript.
+                multi-room chat app called{" "}
+                <a className="noUnderline" href="/projects?project=topico">
+                  Topico
+                </a>{" "}
+                that used express and websockets. Since then I have used
+                Javascript when working on our service UI at{" "}
+                <a className="noUnderline" href="/projects?project=yandexFront">
+                  Yandex
+                </a>{" "}
+                as well as in my own projects, including this{" "}
+                <a className="noUnderline" href="/projects?project=website">
+                  website
+                </a>
+                . I use JS mostly with React and since I prefer strongly typed
+                languages I use typescript.
               </p>
             </Card.Text>
           </Card.Body>
