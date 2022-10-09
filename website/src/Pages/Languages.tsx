@@ -1,39 +1,64 @@
-import React, { ReactElement, useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { NavBar } from "../Nav";
-import { Row, Col } from "react-bootstrap";
-import { PythonCard, PythonImg } from "../Cards/Python";
-import { GolangCard, GolangImg } from "../Cards/Golang";
-import { JavascriptCard, JavascriptImg } from "../Cards/Javascript";
+import React, { ReactElement, useEffect, useState } from "react";
+import { NavBar } from "../Cards/Nav";
+import { useSearchParams } from "react-router-dom";
+import { Row, Col, Container } from "react-bootstrap";
+import { PythonCard } from "../Cards/Python";
+import { GolangCard } from "../Cards/Golang";
+import { JavascriptCard } from "../Cards/Javascript";
+
+import { BaseImg } from "../Cards/BaseImg";
 
 export const Languages: React.FC = (): ReactElement => {
   const [open, setOpen] = useState("");
+  //   const [lang, setLang] = useState("");
+  const [langParam] = useSearchParams();
+
+  useEffect(() => {
+    const lang = langParam.get("lang");
+    if (lang != null && open === "") {
+      setOpen(lang);
+    }
+  });
+
   return (
     <div className="Languages">
       <NavBar />
-      <Row className="align-items-center" style={{ height: "10rem" }}>
+      <Row
+        className="align-items-center"
+        sm={3}
+        xs={3}
+        style={{ height: "10rem" }}
+      >
         <Col align="center">
-          <PythonImg setOpen={setOpen} />
+          <BaseImg
+            name="python"
+            src="../../img/python.png"
+            open={open}
+            setOpen={setOpen}
+          />
         </Col>
         <Col align="center">
-          <GolangImg setOpen={setOpen} />
+          <BaseImg
+            name="golang"
+            src="../../img/golang.png"
+            open={open}
+            setOpen={setOpen}
+          />
         </Col>
         <Col align="center">
-          <JavascriptImg setOpen={setOpen} />
+          <BaseImg
+            name="javascript"
+            src="../../img/javascript.png"
+            open={open}
+            setOpen={setOpen}
+          />
         </Col>
       </Row>
-      <Row className="align-items-center" style={{ height: "20rem" }}>
-        <Col>
-          <PythonCard open={open} />
-        </Col>
-        <Col>
-          <GolangCard open={open} />
-        </Col>
-        <Col>
-          <JavascriptCard open={open} />
-        </Col>
-      </Row>
-
+      <Container>
+        <PythonCard open={open} />
+        <GolangCard open={open} />
+        <JavascriptCard open={open} />
+      </Container>
       <img className="bg-img" />
     </div>
   );
