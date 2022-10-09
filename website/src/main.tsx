@@ -7,7 +7,7 @@ import { Projects } from "./Pages/Projects";
 import { Languages } from "./Pages/Languages";
 import { Home } from "./Pages/Home";
 import { BackGround } from "./Components/Background";
-// import "./index.css";
+import "./style.css";
 
 const Routing: React.FC = (): ReactElement => {
   return (
