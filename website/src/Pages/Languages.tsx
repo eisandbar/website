@@ -1,12 +1,12 @@
 import React, { ReactElement, useEffect, useState } from "react";
-import { NavBar } from "../Cards/Nav";
+import { NavBar } from "../Components/Nav";
 import { useSearchParams } from "react-router-dom";
 import { Row, Col, Container } from "react-bootstrap";
-import { PythonCard } from "../Cards/Python";
-import { GolangCard } from "../Cards/Golang";
-import { JavascriptCard } from "../Cards/Javascript";
+import { PythonCard } from "../Components/Python";
+import { GolangCard } from "../Components/Golang";
+import { JavascriptCard } from "../Components/Javascript";
 
-import { BaseImg } from "../Cards/BaseImg";
+import { BaseImg } from "../Components/BaseImg";
 
 export const Languages: React.FC = (): ReactElement => {
   const [open, setOpen] = useState("");

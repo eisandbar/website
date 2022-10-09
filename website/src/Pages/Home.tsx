@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
-import { NavBar } from "../Cards/Nav";
+import { NavBar } from "../Components/Nav";
 import { Container, Row } from "react-bootstrap";
-import { HomeCard } from "../Cards/Home";
+import { HomeCard } from "../Components/Home";
 
 const lightBlue = { color: "rgb(220,240,250)" };
 const paleBlue = { color: "rgb(180,200,200)" };
