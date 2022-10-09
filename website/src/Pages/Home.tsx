@@ -1,6 +1,5 @@
 import React, { ReactElement } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { NavBar } from "../Nav";
+import { NavBar } from "../Cards/Nav";
 import { Container, Row } from "react-bootstrap";
 import { HomeCard } from "../Cards/Home";
 
@@ -20,9 +19,14 @@ export const Home: React.FC = (): ReactElement => {
             <span style={lightBlue}>ANDREY</span>{" "}
             <span style={paleBlue}>EM</span>
           </h1>
-          <h1 className="display-6 text-center fw-bold" style={paleBlue}>
-            @eisandbar
-          </h1>
+          <a
+            href="https://github.com/eisandbar"
+            style={{ textDecoration: "none" }}
+          >
+            <h1 className="display-6 text-center fw-bold" style={paleBlue}>
+              @eisandbar
+            </h1>
+          </a>
         </Container>
       </Row>
       <Row>
