@@ -31,8 +31,8 @@ export const GolangCard = (props: { open: string }): ReactElement => {
       <div>
         <Card className="mx-auto text-center" bg="dark" text="light">
           <Card.Body>
-            <Card.Title>Golang</Card.Title>
-            <Card.Text className="mx-auto" style={{ width: "40rem" }}>
+            <Card.Title className="fs-2">Golang</Card.Title>
+            <Card.Text className="mx-auto w-75 fs-4">
               <p>
                 <span>
                   Golang is one of my favorite languages to work in and the one

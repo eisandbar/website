@@ -31,8 +31,8 @@ export const JavascriptCard = (props: { open: string }): ReactElement => {
       <div>
         <Card className="mx-auto text-center" bg="dark" text="light">
           <Card.Body>
-            <Card.Title>Javascript</Card.Title>
-            <Card.Text className="mx-auto" style={{ width: "40rem" }}>
+            <Card.Title className="fs-2">Javascript</Card.Title>
+            <Card.Text className="mx-auto w-75 fs-4">
               <p>
                 My first non academic project was in Javascript. It was a
                 multi-room chat app called{" "}
