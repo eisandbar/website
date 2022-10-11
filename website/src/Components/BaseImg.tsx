@@ -1,29 +1,32 @@
 import React, { ReactElement } from "react";
-import { Image } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 
 interface ImageProps {
   setOpen: React.Dispatch<React.SetStateAction<string>>;
   open: string;
   name: string;
   src: string;
+  title?: string;
 }
 
 export const BaseImg: React.FC<ImageProps> = (
   props: ImageProps
 ): ReactElement => {
   return (
-    <Image
-      src={props.src}
-      fluid
-      className="imageBox"
-      onClick={() => {
-        if (props.open === props.name) {
-          props.setOpen("");
-        } else {
-          props.setOpen(props.name);
-        }
-      }}
-    />
+    <div className="imageBox ratio ratio-1x1">
+      <Image
+        className="ratio ratio-1x1"
+        src={props.src}
+        style={{ height: "75%", width: "75%" }}
+        onClick={() => {
+          if (props.open === props.name) {
+            props.setOpen("");
+          } else {
+            props.setOpen(props.name);
+          }
+        }}
+      />
+    </div>
   );
 };
 
@@ -36,20 +39,23 @@ export const BaseImgWithText: React.FC<ImageProps> = (
     ")";
 
   return (
-    <div
-      className="bg-image imageBox rounded-4"
-      style={{
-        backgroundImage: image,
-      }}
-      onClick={() => {
-        if (props.open === props.name) {
-          props.setOpen("");
-        } else {
-          props.setOpen(props.name);
-        }
-      }}
-    >
-      <h4 className="text-light">{props.name}</h4>
+    <div className="backgroundBox">
+      <div
+        className="bg-image rounded-4 ratio ratio-1x1 w-75"
+        style={{
+          backgroundImage: image,
+          backgroundSize: "100% 100%",
+        }}
+        onClick={() => {
+          if (props.open === props.name) {
+            props.setOpen("");
+          } else {
+            props.setOpen(props.name);
+          }
+        }}
+      >
+        <h4 className="text-light">{props.title}</h4>
+      </div>
     </div>
   );
 };
