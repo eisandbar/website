@@ -2,17 +2,33 @@ import React, { ReactElement } from "react";
 import { Container } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 
+const lightBlue = { color: "rgb(220,240,250)" };
+const paleBlue = { color: "rgb(180,200,200)" };
+
+export const HomeTitle: React.FC = (): ReactElement => {
+  return (
+    <Container>
+      <h1
+        className="display-1 fw-bold text-center"
+        style={{ WebkitTextStroke: "4px" }}
+      >
+        <span style={lightBlue}>ANDREY</span> <span style={paleBlue}>EM</span>
+      </h1>
+      <a href="https://github.com/eisandbar" style={{ textDecoration: "none" }}>
+        <h1 className="display-6 text-center fw-bold" style={paleBlue}>
+          @eisandbar
+        </h1>
+      </a>
+    </Container>
+  );
+};
+
 export const HomeCard: React.FC = (): ReactElement => {
   return (
     <Container>
-      <Card
-        className="mx-auto"
-        bg="dark"
-        text="light"
-        style={{ width: "48rem" }}
-      >
+      <Card className="mx-auto w-75 text-center fs-4" bg="dark" text="light">
         <Card.Body>
-          <Card.Title>About Me</Card.Title>
+          <Card.Title className="fs-3">About Me</Card.Title>
           <Card.Text>
             <p>
               <span>I&#39;m a software developer who uses </span>
