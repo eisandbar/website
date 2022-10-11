@@ -2,9 +2,11 @@ import React, { ReactElement, useEffect, useState } from "react";
 import { NavBar } from "../Components/Nav";
 import { useSearchParams } from "react-router-dom";
 import { Row, Col, Container } from "react-bootstrap";
-import { PythonCard } from "../Components/Python";
-import { GolangCard } from "../Components/Golang";
-import { JavascriptCard } from "../Components/Javascript";
+import {
+  PythonCard,
+  GolangCard,
+  JavascriptCard,
+} from "../Components/Languages";
 
 import { BaseImg } from "../Components/BaseImg";
 
