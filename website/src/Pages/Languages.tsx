@@ -21,14 +21,9 @@ export const Languages: React.FC = (): ReactElement => {
   });
 
   return (
-    <div className="Languages">
+    <div className="Languages h-75">
       <NavBar />
-      <Row
-        className="align-items-center"
-        sm={3}
-        xs={3}
-        style={{ height: "10rem" }}
-      >
+      <Row className="align-items-center h-50 w-100" sm={3} xs={3}>
         <Col align="center">
           <BaseImg
             name="python"

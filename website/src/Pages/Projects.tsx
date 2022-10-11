@@ -7,7 +7,7 @@ export const Projects: React.FC = (): ReactElement => {
   const [open, setOpen] = useState("");
 
   return (
-    <div className="Projects">
+    <div className="Projects h-75">
       <NavBar />
       <ProjectGrid open={open} setOpen={setOpen} />
       <ProjectModal open={open} setOpen={setOpen} />
