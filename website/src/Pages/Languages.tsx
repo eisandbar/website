@@ -1,7 +1,7 @@
 import React, { ReactElement, useEffect, useState } from "react";
 import { NavBar } from "../Components/Nav";
 import { useSearchParams } from "react-router-dom";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container, Collapse } from "react-bootstrap";
 import {
   PythonCard,
   GolangCard,
@@ -10,53 +10,63 @@ import {
 
 import { BaseImg } from "../Components/BaseImg";
 
-export const Languages: React.FC = (): ReactElement => {
-  const [open, setOpen] = useState("");
-  //   const [lang, setLang] = useState("");
+export const Languages = (): ReactElement => {
+  const [open, setOpen] = useState("firstLoad");
+  const [show, setShow] = useState(false);
   const [langParam] = useSearchParams();
 
   useEffect(() => {
+    setTimeout(() => setShow(true), 400);
+
     const lang = langParam.get("lang");
-    if (lang != null && open === "") {
+    if (lang != null && open === "firstLoad") {
       setOpen(lang);
     }
   });
 
   return (
     <div className="Languages h-75">
-      <NavBar />
-      <Row className="align-items-center h-50 w-100" sm={3} xs={3}>
-        <Col align="center">
-          <BaseImg
-            name="python"
-            src="../../img/python.png"
-            open={open}
-            setOpen={setOpen}
-          />
-        </Col>
-        <Col align="center">
-          <BaseImg
-            name="golang"
-            src="../../img/golang.png"
-            open={open}
-            setOpen={setOpen}
-          />
-        </Col>
-        <Col align="center">
-          <BaseImg
-            name="javascript"
-            src="../../img/javascript.png"
-            open={open}
-            setOpen={setOpen}
-          />
-        </Col>
-      </Row>
-      <Container>
-        <PythonCard open={open} />
-        <GolangCard open={open} />
-        <JavascriptCard open={open} />
-      </Container>
-      <img className="bg-img" />
+      <NavBar show={show} />
+      <Collapse in={show}>
+        <div className="h-50">
+          <Row className="align-items-center h-100 w-100" sm={3} xs={3}>
+            <Col align="center">
+              <BaseImg
+                name="python"
+                src="../../img/python.png"
+                open={open}
+                setOpen={setOpen}
+              />
+            </Col>
+            <Col align="center">
+              <BaseImg
+                name="golang"
+                src="../../img/golang.png"
+                open={open}
+                setOpen={setOpen}
+              />
+            </Col>
+            <Col align="center">
+              <BaseImg
+                name="javascript"
+                src="../../img/javascript.png"
+                open={open}
+                setOpen={setOpen}
+              />
+            </Col>
+          </Row>
+        </div>
+      </Collapse>
+
+      <Collapse in={show}>
+        <div>
+          <Container>
+            <PythonCard open={open} />
+            <GolangCard open={open} />
+            <JavascriptCard open={open} />
+          </Container>
+        </div>
+      </Collapse>
     </div>
   );
 };
