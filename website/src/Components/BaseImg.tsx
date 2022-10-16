@@ -55,3 +55,15 @@ export const BaseImgWithText = (props: ImageProps): ReactElement => {
     </div>
   );
 };
+
+interface GitImageProps {
+  href?: string;
+}
+
+export const GithubImg = (props: GitImageProps): ReactElement => {
+  return (
+    <a className="noUnderline" href={props.href}>
+      <Image src="../../img/github.png" />
+    </a>
+  );
+};
