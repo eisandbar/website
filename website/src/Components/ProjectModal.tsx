@@ -6,96 +6,38 @@ interface ProjectProps {
   open: string;
 }
 
-export const ProjectModal: React.FC<ProjectProps> = (
-  props: ProjectProps
-): ReactElement => {
+interface ModalProps extends ProjectProps {
+  name: string;
+  title?: string;
+  children?: React.ReactNode;
+}
+
+const ModalBase = (props: ModalProps): ReactElement => {
   const handleClose = (): void => props.setOpen("");
   return (
+    <Modal
+      show={props.open === props.name}
+      onHide={handleClose}
+      dialogClassName="modal-custom"
+    >
+      <div className="modal-custom bg-dark text-light text-center fs-4">
+        <Modal.Header closeButton>
+          <Modal.Title className="w-100" as="h2">
+            {props.title}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{props.children}</Modal.Body>
+      </div>
+    </Modal>
+  );
+};
+
+export const ProjectModal = (props: ProjectProps): ReactElement => {
+  return (
     <div>
-      <Modal
-        show={props.open === "buspool"}
-        onHide={handleClose}
-        dialogClassName="modal-custom"
-      >
-        <div className="modal-custom">
-          <Modal.Header closeButton>
-            <Modal.Title>{props.open}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body></Modal.Body>
-        </div>
-      </Modal>
-      <Modal
-        show={props.open === "poker"}
-        onHide={handleClose}
-        dialogClassName="modal-custom"
-      >
-        <div className="modal-custom">
-          <Modal.Header closeButton>
-            <Modal.Title>{props.open}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body></Modal.Body>
-        </div>
-      </Modal>
-      <Modal
-        show={props.open === "website"}
-        onHide={handleClose}
-        dialogClassName="modal-custom"
-      >
-        <div className="modal-custom">
-          <Modal.Header closeButton>
-            <Modal.Title>{props.open}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body></Modal.Body>
-        </div>
-      </Modal>
-      <Modal
-        show={props.open === "university"}
-        onHide={handleClose}
-        dialogClassName="modal-custom"
-      >
-        <div className="modal-custom">
-          <Modal.Header closeButton>
-            <Modal.Title>{props.open}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body></Modal.Body>
-        </div>
-      </Modal>
-      <Modal
-        show={props.open === "yandex"}
-        onHide={handleClose}
-        dialogClassName="modal-custom"
-      >
-        <div className="modal-custom">
-          <Modal.Header closeButton>
-            <Modal.Title>{props.open}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body></Modal.Body>
-        </div>
-      </Modal>
-      <Modal
-        show={props.open === "topico"}
-        onHide={handleClose}
-        dialogClassName="modal-custom"
-      >
-        <div className="modal-custom">
-          <Modal.Header closeButton>
-            <Modal.Title>{props.open}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body></Modal.Body>
-        </div>
-      </Modal>
-      <Modal
-        show={props.open === "yandexFront"}
-        onHide={handleClose}
-        dialogClassName="modal-custom"
-      >
-        <div className="modal-custom">
-          <Modal.Header closeButton>
-            <Modal.Title>{props.open}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body></Modal.Body>
-        </div>
-      </Modal>
+      <ModalBase name="buspool" title="BusPool" {...props}>
+        <div>Text</div>
+      </ModalBase>
     </div>
   );
 };
