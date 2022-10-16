@@ -4,9 +4,7 @@ interface BackGroundProps {
   children: React.ReactNode;
 }
 
-export const BackGround: React.FC<BackGroundProps> = (
-  props: BackGroundProps
-): ReactElement => {
+export const BackGround = (props: BackGroundProps): ReactElement => {
   return (
     <div
       className="bg-image"

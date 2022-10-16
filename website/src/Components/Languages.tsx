@@ -9,7 +9,7 @@ interface CardProps {
   children?: React.ReactNode;
 }
 
-const BaseCard: React.FC<CardProps> = (props: CardProps): ReactElement => {
+const BaseCard = (props: CardProps): ReactElement => {
   return (
     <Collapse in={props.open === props.name}>
       <div>

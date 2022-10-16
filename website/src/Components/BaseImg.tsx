@@ -9,9 +9,7 @@ interface ImageProps {
   title?: string;
 }
 
-export const BaseImg: React.FC<ImageProps> = (
-  props: ImageProps
-): ReactElement => {
+export const BaseImg = (props: ImageProps): ReactElement => {
   return (
     <div className="imageBox ratio ratio-1x1">
       <Image
@@ -30,9 +28,7 @@ export const BaseImg: React.FC<ImageProps> = (
   );
 };
 
-export const BaseImgWithText: React.FC<ImageProps> = (
-  props: ImageProps
-): ReactElement => {
+export const BaseImgWithText = (props: ImageProps): ReactElement => {
   const image =
     "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(" +
     props.src +

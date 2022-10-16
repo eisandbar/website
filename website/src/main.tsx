@@ -9,7 +9,7 @@ import { Home } from "./Pages/Home";
 import { BackGround } from "./Components/Background";
 import "./style.css";
 
-const Routing: React.FC = (): ReactElement => {
+const Routing = (): ReactElement => {
   return (
     <BackGround>
       <Router>
