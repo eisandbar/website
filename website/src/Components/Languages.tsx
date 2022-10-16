@@ -63,7 +63,7 @@ export const JavascriptCard = (props: { open: string }): ReactElement => {
         </a>{" "}
         that used express and websockets. Since then I have used Javascript when
         working on our service UI at{" "}
-        <a className="noUnderline" href="/projects?project=yandexFront">
+        <a className="noUnderline" href="/projects?project=yandexFrontend">
           Yandex
         </a>{" "}
         as well as in my own projects, including this{" "}

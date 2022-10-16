@@ -77,7 +77,7 @@ export const ProjectGrid = ({
         <Row className="align-items-center  h-50 w-100" sm={3} xs={3}>
           <Col align="center">
             <BaseImgWithText
-              name="yandexFront"
+              name="yandexFrontend"
               title="Yandex
             Frontend"
               src="../../img/yandex.png"
