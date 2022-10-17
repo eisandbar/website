@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: nginx
+    build: 
+      context: ./nginx/
+      dockerfile: Dockerfile
+    depends_on:
+      - website
+    ports:
+      - 8080:80
+    restart: on-failure
+    volumes:
+      - ./build:/var/www/eisandbar/html
+
+  website:
+    container_name: website
+    build: 
+      context: ./website/
+      dockerfile: Dockerfile
+    restart: on-failure
+    volumes:
+      - ./build/:/website/dist/
