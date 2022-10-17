@@ -6,10 +6,8 @@ services:
     build: 
       context: ./nginx/
       dockerfile: Dockerfile
-    depends_on:
-      - website
     ports:
-      - 8080:80
+      - 443:443
     restart: on-failure
     volumes:
       - ./build:/var/www/eisandbar/html
