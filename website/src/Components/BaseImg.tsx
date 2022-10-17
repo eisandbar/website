@@ -63,7 +63,7 @@ interface GitImageProps {
 export const GithubImg = (props: GitImageProps): ReactElement => {
   return (
     <a className="noUnderline" href={props.href}>
-      <Image src="../../img/github.png" />
+      <Image src="/github.png" />
     </a>
   );
 };

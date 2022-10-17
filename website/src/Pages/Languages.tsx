@@ -33,7 +33,7 @@ export const Languages = (): ReactElement => {
             <Col align="center">
               <BaseImg
                 name="python"
-                src="../../img/python.png"
+                src="/python.png"
                 open={open}
                 setOpen={setOpen}
               />
@@ -41,7 +41,7 @@ export const Languages = (): ReactElement => {
             <Col align="center">
               <BaseImg
                 name="golang"
-                src="../../img/golang.png"
+                src="/golang.png"
                 open={open}
                 setOpen={setOpen}
               />
@@ -49,7 +49,7 @@ export const Languages = (): ReactElement => {
             <Col align="center">
               <BaseImg
                 name="javascript"
-                src="../../img/javascript.png"
+                src="/javascript.png"
                 open={open}
                 setOpen={setOpen}
               />

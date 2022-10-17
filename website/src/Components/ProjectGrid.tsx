@@ -21,7 +21,7 @@ export const ProjectGrid = ({
             <BaseImgWithText
               name="buspool"
               title="BusPool"
-              src="../../img/map.png"
+              src="/map.png"
               open={open}
               setOpen={setOpen}
             />
@@ -30,7 +30,7 @@ export const ProjectGrid = ({
             <BaseImgWithText
               name="poker"
               title="Poker"
-              src="../../img/poker.jpeg"
+              src="/poker.jpeg"
               open={open}
               setOpen={setOpen}
             />
@@ -39,7 +39,7 @@ export const ProjectGrid = ({
             <BaseImgWithText
               name="website"
               title="Website"
-              src="../../img/website.png"
+              src="/website.png"
               open={open}
               setOpen={setOpen}
             />
@@ -50,7 +50,7 @@ export const ProjectGrid = ({
             <BaseImgWithText
               name="university"
               title="University"
-              src="../../img/university.png"
+              src="/university.png"
               open={open}
               setOpen={setOpen}
             />
@@ -59,7 +59,7 @@ export const ProjectGrid = ({
             <BaseImgWithText
               name="yandex"
               title="Yandex"
-              src="../../img/yandex.png"
+              src="/yandex.png"
               open={open}
               setOpen={setOpen}
             />
@@ -68,7 +68,7 @@ export const ProjectGrid = ({
             <BaseImgWithText
               name="topico"
               title="Topico"
-              src="../../img/topico.png"
+              src="/topico.png"
               open={open}
               setOpen={setOpen}
             />
@@ -80,7 +80,7 @@ export const ProjectGrid = ({
               name="yandexFrontend"
               title="Yandex
             Frontend"
-              src="../../img/yandex.png"
+              src="/yandex.png"
               open={open}
               setOpen={setOpen}
             />
