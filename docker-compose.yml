@@ -12,6 +12,7 @@ services:
     restart: on-failure
     volumes:
       - ./build:/var/www/eisandbar/html
+      - /etc/letsencrypt:/etc/letsencrypt
 
   website:
     container_name: website
