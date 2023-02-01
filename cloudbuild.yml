@@ -1,13 +1,9 @@
 steps:
-  - name: "gcr.io/cloud-builders/gcloud" # cloud builder with gcloud installed
-    id: Update live server
-    entrypoint: /bin/sh
+  - name: gcr.io/cloud-builders/gcloud
     args:
-      [
-        "gcloud",
-        "compute",
-        "ssh",
-        "eisandbar@website",
-        "--zone=us-east4-c",
-        "--command='/bins/sh /home/eisandbar/website/pull.sh'",
-      ]
+      - compute
+      - ssh
+      - eisandbar@website
+      - "--zone=us-central1-c"
+      - '--command="/home/eisandbar/website/pull.sh"'
+    id: Update live server
