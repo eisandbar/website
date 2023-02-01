@@ -2,17 +2,15 @@ version: '3'
 
 services:
   nginx:
-    container_name: nginx
+    container_name: eisandbar-nginx
     build: 
       context: ./nginx/
       dockerfile: Dockerfile
-    ports:
-      - 443:443
-      - 80:80
+    networks:
+      - nginx-network
     restart: on-failure
     volumes:
       - ./build:/var/www/eisandbar/html
-      - /etc/letsencrypt:/etc/letsencrypt
 
   website:
     container_name: website
@@ -22,3 +20,24 @@ services:
     restart: on-failure
     volumes:
       - ./build/:/website/dist/
+
+  revprox:
+    container_name: revprox
+    build:
+      context: ./reverse-proxy/
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+      - 443:443
+      - 3000:3000
+      - 3001:3001
+    networks:
+    - nginx-network
+    restart: on-failure
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+
+networks:
+  nginx-network:
+    name: nginx-network
+    external: true
