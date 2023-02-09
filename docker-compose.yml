@@ -17,7 +17,6 @@ services:
     build: 
       context: ./website/
       dockerfile: Dockerfile
-    restart: on-failure
     volumes:
       - ./build/:/website/dist/
 
