@@ -66,12 +66,12 @@ export const HomeCard = ({ show = true }: HomeProps): ReactElement => {
                 </p>
                 <p>
                   <span>Some of my most recent projects include </span>
-                  <a href="/projects?project=buspool" className="noUnderline">
-                    BusPool
+                  <a href="/projects?project=ytlive" className="noUnderline">
+                    YT Live
                   </a>
                   <span>, </span>
-                  <a href="/projects?project=poker" className="noUnderline">
-                    Poker
+                  <a href="/projects?project=buspool" className="noUnderline">
+                    BusPool
                   </a>
                   <span>, and this </span>
                   <a href="/projects?project=website" className="noUnderline">

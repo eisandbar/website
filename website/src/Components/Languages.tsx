@@ -36,6 +36,10 @@ export const GolangCard = (props: { open: string }): ReactElement => {
           working at Yandex as part of the codebase was in GO, and have since
           grown to love it. Some of my recent work includes{" "}
         </span>
+        <a className="noUnderline" href="/projects?project=ytlive">
+          YT Live
+        </a>
+        ,{" "}
         <a className="noUnderline" href="/projects?project=buspool">
           BusPool
         </a>
@@ -63,10 +67,14 @@ export const JavascriptCard = (props: { open: string }): ReactElement => {
         </a>{" "}
         that used express and websockets. Since then I have used Javascript when
         working on our service UI at{" "}
-        <a className="noUnderline" href="/projects?project=yandexFrontend">
+        <a className="noUnderline" href="/projects?project=yandex">
           Yandex
         </a>{" "}
-        as well as in my own projects, including this{" "}
+        as well as in my own projects, including{" "}
+        <a className="noUnderline" href="/projects?project=ytlive">
+          YT Live
+        </a>{" "}
+        and this{" "}
         <a className="noUnderline" href="/projects?project=website">
           website
         </a>
