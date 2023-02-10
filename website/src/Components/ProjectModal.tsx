@@ -42,7 +42,7 @@ export const ProjectModal = (props: ProjectProps): ReactElement => {
       <UniversityModal {...props} />
       <YandexModal {...props} />
       <TopicoModal {...props} />
-      <YandexFrontendModal {...props} />
+      <YTLiveModal {...props} />
     </div>
   );
 };
@@ -122,15 +122,6 @@ const YandexModal = (props: ProjectProps): ReactElement => {
           as performance improvement, bug fixing and management of the test
           suite.
         </p>
-      </div>
-    </ModalBase>
-  );
-};
-
-const YandexFrontendModal = (props: ProjectProps): ReactElement => {
-  return (
-    <ModalBase name="yandexFrontend" title="Frontend at Yandex" {...props}>
-      <div>
         <p>
           At Yandex I also did frontend work on the dev-facing UI that used
           React and Redux.
@@ -143,7 +134,6 @@ const YandexFrontendModal = (props: ProjectProps): ReactElement => {
     </ModalBase>
   );
 };
-
 const TopicoModal = (props: ProjectProps): ReactElement => {
   return (
     <ModalBase name="topico" title="Topico Chat App" {...props}>
@@ -158,6 +148,30 @@ const TopicoModal = (props: ProjectProps): ReactElement => {
         </p>
 
         <GithubImg href="https://github.com/eisandbar/Topico" />
+      </div>
+    </ModalBase>
+  );
+};
+
+const YTLiveModal = (props: ProjectProps): ReactElement => {
+  return (
+    <ModalBase name="ytlive" title="YT Live" {...props}>
+      <div>
+        <p>
+          YT Live is a website I started to help with discoverability of
+          livestreams on youtube. You can check it out{" "}
+          <a href="https://ytlive.online">here</a>
+        </p>
+        <p>
+          The backend is written in GO and works with Youtube&#39;s Data API.
+        </p>
+        <p>
+          The frontend is in Typescript using React hosted with Google&#39;s App
+          Engine
+        </p>
+        <p>Stream and category data was stored using Postgres</p>
+
+        <GithubImg href="https://github.com/eisandbar/ytlive" />
       </div>
     </ModalBase>
   );
