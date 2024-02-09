@@ -44,8 +44,8 @@ export const GolangCard = (props: { open: string }): ReactElement => {
           BusPool
         </a>
         <span> and </span>
-        <a className="noUnderline" href="/projects?project=poker">
-          Poker
+        <a className="noUnderline" href="/projects?project=animedle">
+          Animedle
         </a>
         <span>
           , as well as simple opensource contributions where I added tests and
@@ -65,21 +65,20 @@ export const JavascriptCard = (props: { open: string }): ReactElement => {
         <a className="noUnderline" href="/projects?project=topico">
           Topico
         </a>{" "}
-        that used express and websockets. Since then I have used Javascript when
-        working on our service UI at{" "}
+        that used express and websockets. Since then I have used Typescript with
+        React when working on the service UI at{" "}
         <a className="noUnderline" href="/projects?project=yandex">
           Yandex
         </a>{" "}
         as well as in my own projects, including{" "}
-        <a className="noUnderline" href="/projects?project=ytlive">
-          YT Live
+        <a className="noUnderline" href="/projects?project=animedle">
+          Animedle
         </a>{" "}
         and this{" "}
         <a className="noUnderline" href="/projects?project=website">
           website
         </a>
-        . I use JS mostly with React and since I prefer strongly typed languages
-        I use typescript.
+        <span>.</span>
       </p>
     </BaseCard>
   );

@@ -43,6 +43,7 @@ export const ProjectModal = (props: ProjectProps): ReactElement => {
       <YandexModal {...props} />
       <TopicoModal {...props} />
       <YTLiveModal {...props} />
+      <AnimedleModal {...props} />
     </div>
   );
 };
@@ -160,10 +161,11 @@ const YTLiveModal = (props: ProjectProps): ReactElement => {
         <p>
           YT Live is a website I started to help with discoverability of
           livestreams on youtube. You can check it out{" "}
-          <a href="https://ytlive.online">here</a>
+          <a href="https://ytlive.eisandbar.xyz">here</a>
         </p>
         <p>
-          The backend is written in GO and works with Youtube&#39;s Data API.
+          The backend is written in GO and is integrated with Youtube&#39;s Data
+          API.
         </p>
         <p>
           The frontend is in Typescript using React hosted with Google&#39;s App
@@ -172,6 +174,22 @@ const YTLiveModal = (props: ProjectProps): ReactElement => {
         <p>Stream and category data was stored using Postgres</p>
 
         <GithubImg href="https://github.com/eisandbar/ytlive" />
+      </div>
+    </ModalBase>
+  );
+};
+
+const AnimedleModal = (props: ProjectProps): ReactElement => {
+  return (
+    <ModalBase name="animedle" title="Animedle" {...props}>
+      <div>
+        <p>
+          Animedle is an anime guessing game inspired by Wordle and Gamedle. You
+          can find it <a href="https://animedle.eisandbar.xyz">here</a>
+        </p>
+        <p>I used Golang, Postgres, Typescript and React to build this site.</p>
+
+        <GithubImg href="https://github.com/eisandbar/animedle-client" />
       </div>
     </ModalBase>
   );

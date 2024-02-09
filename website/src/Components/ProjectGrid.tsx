@@ -19,18 +19,18 @@ export const ProjectGrid = ({
         <Row className="align-items-center h-50 w-100" sm={3} xs={3}>
           <Col align="center">
             <BaseImgWithText
-              name="buspool"
-              title="BusPool"
-              src="/map.png"
+              name="animedle"
+              title="Animedle"
+              src="/animedle.png"
               open={open}
               setOpen={setOpen}
             />
           </Col>
           <Col align="center">
             <BaseImgWithText
-              name="poker"
-              title="Poker"
-              src="/poker.jpeg"
+              name="ytlive"
+              title="YT Live"
+              src="/ytlive.png"
               open={open}
               setOpen={setOpen}
             />
@@ -46,6 +46,15 @@ export const ProjectGrid = ({
           </Col>
         </Row>
         <Row className="align-items-center h-50 w-100" sm={3} xs={3}>
+          <Col align="center">
+            <BaseImgWithText
+              name="buspool"
+              title="BusPool"
+              src="/map.png"
+              open={open}
+              setOpen={setOpen}
+            />
+          </Col>
           <Col align="center">
             <BaseImgWithText
               name="university"
@@ -64,6 +73,8 @@ export const ProjectGrid = ({
               setOpen={setOpen}
             />
           </Col>
+        </Row>
+        <Row className="align-items-center  h-50 w-100" sm={3} xs={3}>
           <Col align="center">
             <BaseImgWithText
               name="topico"
@@ -73,18 +84,15 @@ export const ProjectGrid = ({
               setOpen={setOpen}
             />
           </Col>
-        </Row>
-        <Row className="align-items-center  h-50 w-100" sm={3} xs={3}>
           <Col align="center">
             <BaseImgWithText
-              name="ytlive"
-              title="YT Live"
-              src="/ytlive.png"
+              name="poker"
+              title="Poker"
+              src="/poker.jpeg"
               open={open}
               setOpen={setOpen}
             />
           </Col>
-          <Col></Col>
           <Col></Col>
         </Row>
       </div>

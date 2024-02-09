@@ -13,7 +13,7 @@ export const BaseImg = (props: ImageProps): ReactElement => {
   return (
     <div className="imageBox ratio ratio-1x1">
       <Image
-        className="ratio ratio-1x1"
+        className="ratio ratio-1x1 hover"
         src={props.src}
         style={{ height: "75%", width: "75%" }}
         onClick={() => {
@@ -37,7 +37,7 @@ export const BaseImgWithText = (props: ImageProps): ReactElement => {
   return (
     <div className="backgroundBox">
       <div
-        className="bg-image rounded-4 ratio ratio-1x1 w-75"
+        className="bg-image rounded-4 ratio ratio-1x1 w-75 hover"
         style={{
           backgroundImage: image,
           backgroundSize: "100% 100%",

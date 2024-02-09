@@ -7,6 +7,9 @@ a.noUnderline {
     min-width: 8rem;
 }
 
+*.hover {
+    cursor: pointer;
+}
 
 *.backgroundBox {
     max-width: 20rem;

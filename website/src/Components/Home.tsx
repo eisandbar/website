@@ -73,10 +73,11 @@ export const HomeCard = ({ show = true }: HomeProps): ReactElement => {
                   <a href="/projects?project=buspool" className="noUnderline">
                     BusPool
                   </a>
-                  <span>, and this </span>
-                  <a href="/projects?project=website" className="noUnderline">
-                    website
+                  <span>, and </span>
+                  <a href="/projects?project=animedle" className="noUnderline">
+                    Animedle
                   </a>
+                  <span>.</span>
                 </p>
                 <p>
                   <span>Check out my </span>
