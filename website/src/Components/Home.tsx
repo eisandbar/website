@@ -66,7 +66,10 @@ export const HomeCard = ({ show = true }: HomeProps): ReactElement => {
                 </p>
                 <p>
                   <span>Some of my most recent projects include </span>
-                  <a href="/projects?project=ytlive" className="noUnderline">
+                  <a
+                    href="https://ytlive.eisandbar.xyz"
+                    className="noUnderline"
+                  >
                     YT Live
                   </a>
                   <span>, </span>
@@ -74,7 +77,10 @@ export const HomeCard = ({ show = true }: HomeProps): ReactElement => {
                     BusPool
                   </a>
                   <span>, and </span>
-                  <a href="/projects?project=animedle" className="noUnderline">
+                  <a
+                    href="https://animedle.eisandbar.xyz"
+                    className="noUnderline"
+                  >
                     Animedle
                   </a>
                   <span>.</span>
