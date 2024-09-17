@@ -58,6 +58,10 @@ export const HomeCard = ({ show = true }: HomeProps): ReactElement => {
                   <a href="/lang?lang=golang" className="noUnderline">
                     Golang
                   </a>
+                  <span>, </span>
+                  <a href="/lang?lang=csharp" className="noUnderline">
+                    C#
+                  </a>
                   <span>, and </span>
                   <a href="/lang?lang=javascript" className="noUnderline">
                     Javascript
@@ -73,8 +77,8 @@ export const HomeCard = ({ show = true }: HomeProps): ReactElement => {
                     YT Live
                   </a>
                   <span>, </span>
-                  <a href="/projects?project=buspool" className="noUnderline">
-                    BusPool
+                  <a href="/projects?project=diogin" className="noUnderline">
+                    Diogin
                   </a>
                   <span>, and </span>
                   <a

@@ -36,6 +36,8 @@ const ModalBase = (props: ModalProps): ReactElement => {
 export const ProjectModal = (props: ProjectProps): ReactElement => {
   return (
     <div>
+      <DioginModal {...props}/>
+      <PerfectFitModal {...props} />
       <BusPoolModal {...props} />
       <PokerModal {...props} />
       <WebsiteModal {...props} />
@@ -190,6 +192,38 @@ const AnimedleModal = (props: ProjectProps): ReactElement => {
         <p>I used Golang, Postgres, Typescript and React to build this site.</p>
 
         <GithubImg href="https://github.com/eisandbar/animedle-client" />
+      </div>
+    </ModalBase>
+  );
+};
+
+const DioginModal = (props: ProjectProps): ReactElement => {
+  return (
+    <ModalBase name="diogin" title="Diogin: Frozen Shadows" {...props}>
+      <div>
+        <p>
+          Diogin is a 2D action survival game that I made for the Pirate Software Game Jam.
+          It was a blast to make and my first time participating in a game jam as well as my 
+          first attempt at creating pixel art and animations. 
+          <br/>
+          You can find the published game <a href="https://eisandbar.itch.io/diogin-frozen-shadows">here</a>.
+        </p>
+      </div>
+    </ModalBase>
+  );
+};
+
+const PerfectFitModal = (props: ProjectProps): ReactElement => {
+  return (
+    <ModalBase name="perfectfit" title="Perfect Fit" {...props}>
+      <div>
+        <p>
+          Perfect Fit was my submission for the GMTK Game Jam. The game is relatively simple as
+          I wanted to complete it within 48h, but I spent a bit more time improving the balance 
+          and general feel of the game. 
+          <br/>
+          You can find the game <a href="https://eisandbar.itch.io/perfect-fit">here</a>.
+        </p>
       </div>
     </ModalBase>
   );

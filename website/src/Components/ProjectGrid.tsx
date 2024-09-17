@@ -16,12 +16,38 @@ export const ProjectGrid = ({
   return (
     <Collapse in={show}>
       <div className="h-100">
-        <Row className="align-items-center h-50 w-100" sm={3} xs={3}>
+        <Row className="align-items-center w-100" sm={3} xs={3}>
+        <Col align="center">
+            <BaseImgWithText
+              name="diogin"
+              title="Diogin"
+              src="/diogin.png"
+              open={open}
+              setOpen={setOpen}
+            />
+          </Col><Col align="center">
+            <BaseImgWithText
+              name="perfectfit"
+              title="Perfect Fit"
+              src="/perfectfit.png"
+              open={open}
+              setOpen={setOpen}
+            />
+          </Col>
           <Col align="center">
             <BaseImgWithText
               name="animedle"
               title="Animedle"
               src="/animedle.png"
+              open={open}
+              setOpen={setOpen}
+            />
+          </Col>
+          <Col align="center">
+            <BaseImgWithText
+              name="yandex"
+              title="Yandex"
+              src="/yandex.png"
               open={open}
               setOpen={setOpen}
             />
@@ -44,8 +70,6 @@ export const ProjectGrid = ({
               setOpen={setOpen}
             />
           </Col>
-        </Row>
-        <Row className="align-items-center h-50 w-100" sm={3} xs={3}>
           <Col align="center">
             <BaseImgWithText
               name="buspool"
@@ -64,18 +88,7 @@ export const ProjectGrid = ({
               setOpen={setOpen}
             />
           </Col>
-          <Col align="center">
-            <BaseImgWithText
-              name="yandex"
-              title="Yandex"
-              src="/yandex.png"
-              open={open}
-              setOpen={setOpen}
-            />
-          </Col>
-        </Row>
-        <Row className="align-items-center  h-50 w-100" sm={3} xs={3}>
-          <Col align="center">
+          {/* <Col align="center">
             <BaseImgWithText
               name="topico"
               title="Topico"
@@ -83,7 +96,7 @@ export const ProjectGrid = ({
               open={open}
               setOpen={setOpen}
             />
-          </Col>
+          </Col> */}
           <Col align="center">
             <BaseImgWithText
               name="poker"

@@ -6,6 +6,7 @@ import {
   PythonCard,
   GolangCard,
   JavascriptCard,
+  CSharpCard
 } from "../Components/Languages";
 
 import { BaseImg } from "../Components/BaseImg";
@@ -28,8 +29,8 @@ export const Languages = (): ReactElement => {
     <div className="Languages h-75">
       <NavBar show={show} />
       <Collapse in={show}>
-        <div className="h-50">
-          <Row className="align-items-center h-100 w-100" sm={3} xs={3}>
+        <div className="pt-5">
+          <Row className="align-items-center" sm={4} xs={4}>
             <Col align="center">
               <BaseImg
                 name="python"
@@ -54,16 +55,26 @@ export const Languages = (): ReactElement => {
                 setOpen={setOpen}
               />
             </Col>
+            <Col align="center">
+              <BaseImg
+                name="csharp"
+                src="/csharp.png"
+                open={open}
+                setOpen={setOpen}
+              />
+            </Col>
           </Row>
+          
         </div>
       </Collapse>
 
       <Collapse in={show}>
-        <div>
+        <div >
           <Container>
             <PythonCard open={open} />
             <GolangCard open={open} />
             <JavascriptCard open={open} />
+            <CSharpCard open={open}/>
           </Container>
         </div>
       </Collapse>

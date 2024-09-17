@@ -109,3 +109,29 @@ export const PythonCard = (props: { open: string }): ReactElement => {
     </BaseCard>
   );
 };
+
+export const CSharpCard = (props: { open: string }): ReactElement => {
+  return (
+    <BaseCard title="CSharp" name="csharp" {...props}>
+      <p>
+        <span>
+          I use C# to create games in Unity. I have been developing games 
+          for a couple years now and have participated in a few game jams 
+          including the ones by{" "}
+        </span>
+        <a className="noUnderline" href="/projects?project=diogin">
+          Pirate Software
+        </a>
+        <span>
+          {" "}
+          and
+          {" "}
+        </span>
+        <a className="noUnderline" href="/projects?project=perfectfit">
+          GMTK
+        </a>
+        <span>.</span>
+      </p>
+    </BaseCard>
+  );
+};

@@ -11,7 +11,7 @@ interface ImageProps {
 
 export const BaseImg = (props: ImageProps): ReactElement => {
   return (
-    <div className="imageBox ratio ratio-1x1">
+    <div className="imageBox ratio ratio-1x1 m-5">
       <Image
         className="ratio ratio-1x1 hover"
         src={props.src}
@@ -29,15 +29,15 @@ export const BaseImg = (props: ImageProps): ReactElement => {
 };
 
 export const BaseImgWithText = (props: ImageProps): ReactElement => {
-  const image =
-    "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(" +
-    props.src +
-    ")";
+  const image = "url(" + props.src + ")";
+    // "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(" +
+    // props.src +
+    // ")";
 
   return (
     <div className="backgroundBox">
       <div
-        className="bg-image rounded-4 ratio ratio-1x1 w-75 hover"
+        className="bg-image rounded-4 ratio ratio-1x1 w-75 hover m-4"
         style={{
           backgroundImage: image,
           backgroundSize: "100% 100%",
@@ -50,7 +50,7 @@ export const BaseImgWithText = (props: ImageProps): ReactElement => {
           }
         }}
       >
-        <h4 className="text-light">{props.title}</h4>
+        <h4 className="text-light font-weight-bold shadow">{props.title}</h4>
       </div>
     </div>
   );
